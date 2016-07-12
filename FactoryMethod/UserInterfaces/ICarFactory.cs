@@ -10,6 +10,6 @@ namespace FactoryMethod.UserInterfaces
     //Creator
     public interface ICarFactory
     {
-        ICar GetCar(CarMaker maker);
+        Car GetCar(CarMaker maker);
     }
 }

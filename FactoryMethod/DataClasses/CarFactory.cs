@@ -10,7 +10,7 @@ namespace FactoryMethod.DataClasses
 {
     public class CarFactory : ICarFactory
     {
-        public ICar GetCar(CarMaker maker)
+        public Car GetCar(CarMaker maker)
         {
             switch (maker)
             {

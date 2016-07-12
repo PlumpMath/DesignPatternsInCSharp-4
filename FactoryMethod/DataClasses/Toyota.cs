@@ -1,18 +1,22 @@
-﻿using FactoryMethod.DataClasses.Enums;
+﻿using System.Collections.Generic;
+using FactoryMethod.DataClasses.Enums;
 using FactoryMethod.UserInterfaces;
 
 namespace FactoryMethod.DataClasses
 {
     //Concrete Product
-    public class Toyota : ICar
+    public class Toyota : Car
     {
         public Toyota()
         {
             Maker = CarMaker.Toyota;
-        }
-
-        public CarMaker Maker { get; set; }
-
-        public string DisplayName => $"Name = {Maker}";
+            ModelList = new List<string>
+            {
+                "Fortuner",
+                "Land Cruiser 200",
+                "Prado",
+                "Venza"
+            };
+        }        
     }
 }

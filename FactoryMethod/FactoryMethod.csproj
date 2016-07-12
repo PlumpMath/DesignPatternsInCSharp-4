@@ -44,13 +44,14 @@
   <ItemGroup>
     <Compile Include="DataClasses\Bugatti.cs" />
     <Compile Include="DataClasses\CarFactory.cs" />
+    <Compile Include="DataClasses\CarModel.cs" />
     <Compile Include="DataClasses\Enums\CarMaker.cs" />
     <Compile Include="DataClasses\Ferrari.cs" />
     <Compile Include="DataClasses\Honda.cs" />
     <Compile Include="DataClasses\Toyota.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserInterfaces\ICar.cs" />
+    <Compile Include="UserInterfaces\Car.cs" />
     <Compile Include="UserInterfaces\ICarFactory.cs" />
   </ItemGroup>
   <ItemGroup>

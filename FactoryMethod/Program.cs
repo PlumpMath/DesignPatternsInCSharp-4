@@ -11,7 +11,7 @@ namespace FactoryMethod
         static void Main(string[] args)
         {
             var factory = new CarFactory() as ICarFactory;
-            var carList = new List<ICar>
+            var carList = new List<Car>
             {
                 factory.GetCar(CarMaker.Bugatti),
                 factory.GetCar(CarMaker.Ferrari),
@@ -19,10 +19,17 @@ namespace FactoryMethod
                 factory.GetCar(CarMaker.Toyota),
             };
 
-            Console.WriteLine("List of car manufacturers:");
+            Console.WriteLine("List of cars by manufacturers:");
             foreach (var car in carList)
             {
-                Console.WriteLine(car.DisplayName);
+                Console.WriteLine("{0} Car Models:", car.Maker);
+                Console.WriteLine("--------------------------");
+                foreach (var carModel in car.ModelList)
+                {
+                    Console.WriteLine(carModel);
+                }
+
+                Console.WriteLine();
             }
 
             Console.ReadKey();
